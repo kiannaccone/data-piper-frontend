@@ -22,3 +22,9 @@ function App() {
 }
 
 export default App;
+
+
+// get information to render in a table
+// make a form so informatin can be added to the table and make sure it persists to the backend
+// create a search bar by client or role
+// CSS color scheme it to data pipers color scheme
