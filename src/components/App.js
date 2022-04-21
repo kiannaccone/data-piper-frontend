@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import '../App.css';
 // import Form from './Form';
 import Information from './Information';
+import Search from './Search';
 
 function App() {
 
   const[dataPiper, setdataPiper] = useState([])
+  const [search, setSearch] = useState("")
 
   const dataPiperUrl = "http://localhost:9292/datapipers"
 
@@ -15,9 +17,19 @@ function App() {
       .then(setdataPiper);
   }, []);
 
+  const filterTable = dataPiper.filter(data => {
+    return(
+        data.client.toLowerCase().includes(search.toLowerCase())
+        ||
+        data.role.toLowerCase().includes(search.toLowerCase())
+    )
+  })
+
   return (
     <div>
-      <Information dataPiper= {dataPiper}/>
+      <h1>Data Piper Coding Challenge</h1>
+      <Search search = {search} setSearch = {setSearch}/>
+      <Information dataPiper= {filterTable}/>
     </div>
   );
 }
@@ -25,7 +37,6 @@ function App() {
 export default App;
 
 
-// get information to render in a table
 // make a form so informatin can be added to the table and make sure it persists to the backend
 // create a search bar by client or role
 // CSS color scheme it to data pipers color scheme
