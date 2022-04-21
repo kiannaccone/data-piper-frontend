@@ -26,7 +26,7 @@ function App() {
   })
 
   return (
-    <div>
+    <div id="header">
       <h1>Data Piper Coding Challenge</h1>
       <Search search = {search} setSearch = {setSearch}/>
       <Information dataPiper= {filterTable} setDataPiper= {setDataPiper}/>
@@ -35,8 +35,3 @@ function App() {
 }
 
 export default App;
-
-
-// make a form so informatin can be added to the table and make sure it persists to the backend
-// create a search bar by client or role
-// CSS color scheme it to data pipers color scheme

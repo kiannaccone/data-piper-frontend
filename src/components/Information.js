@@ -60,7 +60,7 @@ function Information({dataPiper, setDataPiper}){
 
     return(
     <div>
-    <table class="table">
+    <table id="table">
   <thead>
     <tr>
       <th>Client</th>
@@ -77,7 +77,7 @@ function Information({dataPiper, setDataPiper}){
     <tr>
       <td>{pizza.client}</td>
       <td>{pizza.poc}</td>
-      <td>{pizza.email}</td>
+      <td><a href= {pizza.email}>{pizza.email}</a></td>
       <td>{pizza.role}</td>
       <td>{pizza.urgency}</td>
       <td>{pizza.quantity}</td>
@@ -130,7 +130,7 @@ function Information({dataPiper, setDataPiper}){
         required="required"
         placeholder="Quantity"
         onChange = {handleChange}/>
-        <input 
+        <textarea 
         type="text"
         name="skills_needed"
         value={addInfo.skills_needed}
