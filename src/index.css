@@ -73,8 +73,12 @@ form * {
   
 }
 
+#spyglass{
+  padding-right: .5rem;
+}
+
 
 .searchTerm {
   width: 13%;
   font-size: 14px;
- }
+}

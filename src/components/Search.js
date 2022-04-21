@@ -2,7 +2,7 @@
 function Search({search, setSearch}) {
     return (
         <div className="search">
-        <label htmlFor="search">🔎</label>
+        <label id="spyglass" htmlFor="search">🔎</label>
         <input
           className = "searchTerm"
           type="text"
