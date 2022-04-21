@@ -1,8 +1,9 @@
 import { useState } from "react"
 
 
-function Information({dataPiper}){
+function Information({dataPiper, setDataPiper}){
   
+    const [add, setAdd] = useState([])
     const [addInfo, setAddInfo] = useState({
         client: "",
         poc: "",
@@ -10,37 +11,9 @@ function Information({dataPiper}){
         role: "",
         urgency: "",
         quantity: "",
-        skills: ""
+        skills_needed: ""
     })
 
-    // const handleAddFormChange = (e) => {
-    //     e.preventDefault();
-
-    //     const fieldName = e.target.getAttribute("name");
-    //     const fieldValue = e.target.value;
-
-    //     const newFormData = {...addFormData};
-    //     newFormData[fieldName] = fieldValue
-
-    //     setAddInfo(newFormData)
-    // };
-
-    // const handleAddFormSubmit = (e) => {
-    //     e.preventDefault();
-
-    //     const newRow = {
-    //         client: addInfo.client,
-    //         poc: addInfo.poc,
-    //         email: addInfo.email,
-    //         role: addInfo.role,
-    //         urgency: addInfo.urgency,
-    //         quantity: addInfo.quantity,
-    //         skills: addInfo.skills,
-    //     };
-
-    //     const newRow = [...row, newRow];
-    //     setAddInfo(newRow);
-    // }
 
     function handleChange(e) {
         setAddInfo((currentInfo) => ({
@@ -49,38 +22,41 @@ function Information({dataPiper}){
         }))
         console.log(e.target.value)
     }
-    // function handleSubmit (e) {
-    //     e.preventDefault()
-    //     const row = {
-    //       client: addInfo.client,
-    //       poc: addInfo.poc,
-    //       email: addInfo.email,
-    //       role: addInfo.role,
-    //       urgency: addInfo.urgency,
-    //       quantity: addInfo.quantity,
-    //       skills: addInfo.skills,
-    // }
+    function handleSubmit (e) {
+        e.preventDefault()
+        const row = {
+          client: addInfo.client,
+          poc: addInfo.poc,
+          email: addInfo.email,
+          role: addInfo.role,
+          urgency: addInfo.urgency,
+          quantity: addInfo.quantity,
+          skills_needed: addInfo.skills_needed
+    }
 
-    // fetch ("http://localhost:9292/datapipers", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Accept": "application/json",
-    //     }, 
-    //     body: JSON.stringify(book),
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       setBookList((currentBook) => [data, ...currentBook])
-    //       setNewBook({
-    //         title:"",
-    //         author: "",
-    //         genre: "",
-    //         cover:""
-    //     })
-    //     setBookAdd((data))
-    //     });
-    //   }
+    fetch ("http://localhost:9292/datapipers", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }, 
+        body: JSON.stringify(row),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setDataPiper((currentBook) => [data, ...currentBook])
+          setAddInfo({
+            client: "",
+            poc: "",
+            email:"",
+            role: "",
+            urgency: "",
+            quantity: "",
+            skills_needed: ""
+        })
+        setAdd((data))
+        });
+      }
 
     return(
     <div>
@@ -112,49 +88,57 @@ function Information({dataPiper}){
 </table>
 
 <h2>Add a Row</h2>
-    <form>
+    <form onSubmit={handleSubmit}>
         <input 
         type="text"
         name="client"
+        value={addInfo.client}
         required="required"
         placeholder="Clients Name"
         onChange = {handleChange}/>
         <input 
         type="text"
         name="poc"
+        value={addInfo.poc}
         required="required"
         placeholder="Person of Contact"
         onChange = {handleChange}/>
         <input 
         type="text"
         name="email"
+        value={addInfo.email}
         required="required"
         placeholder="Email address"
         onChange = {handleChange}/>
         <input 
         type="text"
         name="role"
+        value={addInfo.role}
         required="required"
         placeholder="Role"
         onChange = {handleChange}/>
         <input 
         type="text"
         name="urgency"
+        value={addInfo.urgency}
         required="required"
         placeholder="Urgency Level"
         onChange = {handleChange}/>
         <input 
         type="text"
         name="quantity"
+        value={addInfo.quantity}
         required="required"
         placeholder="Quantity"
         onChange = {handleChange}/>
         <input 
         type="text"
-        name="skills"
+        name="skills_needed"
+        value={addInfo.skills_needed}
         required="required"
         placeholder="Skills Needed"
         onChange = {handleChange}/>
+        <button id="button" type="submit">Add</button>
     </form>
 </div>
 )

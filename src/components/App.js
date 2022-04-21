@@ -6,7 +6,7 @@ import Search from './Search';
 
 function App() {
 
-  const[dataPiper, setdataPiper] = useState([])
+  const[dataPiper, setDataPiper] = useState([])
   const [search, setSearch] = useState("")
 
   const dataPiperUrl = "http://localhost:9292/datapipers"
@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     fetch(dataPiperUrl)
       .then((resp) => resp.json())
-      .then(setdataPiper);
+      .then(setDataPiper);
   }, []);
 
   const filterTable = dataPiper.filter(data => {
@@ -29,7 +29,7 @@ function App() {
     <div>
       <h1>Data Piper Coding Challenge</h1>
       <Search search = {search} setSearch = {setSearch}/>
-      <Information dataPiper= {filterTable}/>
+      <Information dataPiper= {filterTable} setDataPiper= {setDataPiper}/>
     </div>
   );
 }
