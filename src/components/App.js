@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-import Form from './Form';
+// import Form from './Form';
+import Information from './Information';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <Form dataPiper= {dataPiper}/>
+      <Information dataPiper= {dataPiper}/>
     </div>
   );
 }
