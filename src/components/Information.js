@@ -86,8 +86,7 @@ function Information({dataPiper, setDataPiper}){
     ))}
   </tbody>
 </table>
-
-<h2>Add a Row</h2>
+<h2>Add to Table</h2>
     <form onSubmit={handleSubmit}>
         <input 
         type="text"
