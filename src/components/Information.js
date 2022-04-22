@@ -56,7 +56,8 @@ function Information({dataPiper, setDataPiper}){
         })
         setAdd((data))
         });
-      }
+    }
+
 
     return(
     <div>
@@ -80,7 +81,7 @@ function Information({dataPiper, setDataPiper}){
       <td>{pizza.poc}</td>
       <td><a href= {pizza.email}>{pizza.email}</a></td>
       <td>{pizza.role}</td>
-      <td target="High">{pizza.urgency}</td>
+      <td>{pizza.urgency}</td>
       <td>{pizza.quantity}</td>
       <td>{pizza.skills_needed}</td>
     </tr>
@@ -89,7 +90,7 @@ function Information({dataPiper, setDataPiper}){
 </table>
 </div>
 <h2>Add To Table</h2>
-    <form onSubmit={handleSubmit}>
+    <form id= "form" onSubmit={handleSubmit}>
         <input 
         type="text"
         name="client"
@@ -132,7 +133,7 @@ function Information({dataPiper, setDataPiper}){
         required="required"
         placeholder="Quantity"
         onChange = {handleChange}/>
-        <textarea 
+        <textarea id="textarea"
         type="text"
         name="skills_needed"
         value={addInfo.skills_needed}

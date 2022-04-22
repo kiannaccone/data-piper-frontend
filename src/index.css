@@ -15,7 +15,11 @@ code {
 
 #header{
   text-align: center;
-  padding-top: 7%;
+  padding-top: -20%;
+}
+
+#h1-text{
+  margin-top: -4%;
 }
 
 .table {
@@ -58,14 +62,19 @@ tr:nth-child(even){
   background-color: #f2f2f2;
 }
 
-a[target="High"] {
+#urgency{
   background-color: red;
 }
 
-form {
-  display: flex;
+/* form {
   gap: 5px;
+  margin-right: 5rem; 
+} */
+
+#form{
+  
 }
+
 
 form td:last-child {
   display: flex;
@@ -74,8 +83,15 @@ form td:last-child {
 
 form * {
   font-size:15px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+#textarea{
+  width: 14rem;
+  height: 3rem;
+}
+
+#button{
+  margin: .5rem;
 }
 
 .search {
@@ -89,6 +105,12 @@ form * {
 
 
 .searchTerm {
-  width: 13%;
+  width: 12rem;
   font-size: 14px;
+}
+
+#logo{
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-// import Form from './Form';
 import Information from './Information';
 import Search from './Search';
+import datapiper from "./datapiper.png"
 
 function App() {
 
@@ -27,10 +27,12 @@ function App() {
 
   return (
     <div id="header">
-      <h1>Data Piper Coding Challenge</h1>
+      <img src={datapiper} alt="Data Piper Logo"/>
+      <h1 id="h1-text">Coding Challenge</h1>
       <Search search = {search} setSearch = {setSearch}/>
       <Information dataPiper= {filterTable} setDataPiper= {setDataPiper}/>
     </div>
+
   );
 }
 
