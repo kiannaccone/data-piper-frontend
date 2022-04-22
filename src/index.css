@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Mulish', sans-serif;
-  /* background-color: #03A9F4*/
   padding-bottom: 5%;
 }
 
@@ -38,6 +37,7 @@ table {
 #table-row{
   font-weight: 900;
 }
+
 
 th,
 td {
