@@ -23,12 +23,18 @@ code {
   flex-direction: column;
   gap: 10px;
   padding: 1rem;
+  
+}
+
+.batman{
+  background-color: white;
 }
 
 table {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
+ 
 }
 
 th,
@@ -50,6 +56,10 @@ th {
 
 tr:nth-child(even){
   background-color: #f2f2f2;
+}
+
+a[target="High"] {
+  background-color: red;
 }
 
 form {

@@ -60,6 +60,7 @@ function Information({dataPiper, setDataPiper}){
 
     return(
     <div>
+    <div className="batman">
     <table id="table">
   <thead>
     <tr>
@@ -79,14 +80,15 @@ function Information({dataPiper, setDataPiper}){
       <td>{pizza.poc}</td>
       <td><a href= {pizza.email}>{pizza.email}</a></td>
       <td>{pizza.role}</td>
-      <td>{pizza.urgency}</td>
+      <td target="High">{pizza.urgency}</td>
       <td>{pizza.quantity}</td>
       <td>{pizza.skills_needed}</td>
     </tr>
     ))}
   </tbody>
 </table>
-<h2>Add to Table</h2>
+</div>
+<h2>Add To Table</h2>
     <form onSubmit={handleSubmit}>
         <input 
         type="text"
