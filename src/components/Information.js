@@ -91,42 +91,42 @@ function Information({dataPiper, setDataPiper}){
 </div>
 <h2>Add To Table</h2>
     <form id= "form" onSubmit={handleSubmit}>
-        <input 
+        <input id="client"
         type="text"
         name="client"
         value={addInfo.client}
         required="required"
         placeholder="Clients Name"
         onChange = {handleChange}/>
-        <input 
+        <input id="poc"
         type="text"
         name="poc"
         value={addInfo.poc}
         required="required"
         placeholder="Person of Contact"
         onChange = {handleChange}/>
-        <input 
+        <input id="email"
         type="text"
         name="email"
         value={addInfo.email}
         required="required"
         placeholder="Email address"
         onChange = {handleChange}/>
-        <input 
+        <input id="role"
         type="text"
         name="role"
         value={addInfo.role}
         required="required"
         placeholder="Role"
         onChange = {handleChange}/>
-        <input 
+        <input id="urgency"
         type="text"
         name="urgency"
         value={addInfo.urgency}
         required="required"
         placeholder="Urgency Level"
         onChange = {handleChange}/>
-        <input 
+        <input id="quantity"
         type="text"
         name="quantity"
         value={addInfo.quantity}
@@ -140,6 +140,7 @@ function Information({dataPiper, setDataPiper}){
         required="required"
         placeholder="Skills Needed"
         onChange = {handleChange}/>
+        <br/>
         <button id="button" type="submit">Add</button>
     </form>
 </div>

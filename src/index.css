@@ -15,7 +15,6 @@ code {
 
 #header{
   text-align: center;
-  padding-top: -20%;
 }
 
 #h1-text{
@@ -62,9 +61,6 @@ tr:nth-child(even){
   background-color: #f2f2f2;
 }
 
-#urgency{
-  background-color: red;
-}
 
 /* form {
   gap: 5px;
@@ -72,7 +68,8 @@ tr:nth-child(even){
 } */
 
 #form{
-  
+  padding: 10px 15px;
+  margin: 5px 0;
 }
 
 
@@ -88,10 +85,31 @@ form * {
 #textarea{
   width: 14rem;
   height: 3rem;
+  margin: 0.5%;
+}
+
+#client{
+  margin: 0.5%;
+}
+
+#role{
+  margin: 0.5%;
+}
+
+#quantity{
+  margin: 0.5%;
+}
+#email{
+  margin: 0.5%;
+}
+
+#poc{
+  margin: 0.5%;
 }
 
 #button{
-  margin: .5rem;
+  /* margin: .5rem; */
+  line-break: auto;
 }
 
 .search {
