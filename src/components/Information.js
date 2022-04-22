@@ -62,7 +62,6 @@ function Information({dataPiper, setDataPiper}){
 
     return(
     <div>
-    <div className="batman">
     <table id="table">
   <thead>
     <tr>
@@ -89,8 +88,6 @@ function Information({dataPiper, setDataPiper}){
     ))}
   </tbody>
 </table>
-</div>
-<h2 id="add-to-table-font">Add To Table</h2>
     <form id= "form" onSubmit={handleSubmit}>
         <input id="client"
         type="text"
@@ -142,7 +139,7 @@ function Information({dataPiper, setDataPiper}){
         placeholder="Skills Needed"
         onChange = {handleChange}/>
         <br/>
-        <button id="button" type="submit">Add</button>
+        <button id="button" type="submit">Add To Table</button>
     </form>
 </div>
 )
