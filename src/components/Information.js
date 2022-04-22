@@ -59,6 +59,7 @@ function Information({dataPiper, setDataPiper}){
     }
 
 
+
     return(
     <div>
     <div className="batman">
@@ -81,7 +82,7 @@ function Information({dataPiper, setDataPiper}){
       <td>{pizza.poc}</td>
       <td><a href= {pizza.email}>{pizza.email}</a></td>
       <td>{pizza.role}</td>
-      <td>{pizza.urgency}</td>
+      <td className={pizza.urgency === 'Med'  ? 'orange-background' : '' || pizza.urgency === 'High' ? 'red-background' : ''}>{pizza.urgency}</td>
       <td>{pizza.quantity}</td>
       <td>{pizza.skills_needed}</td>
     </tr>
