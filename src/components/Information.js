@@ -90,7 +90,7 @@ function Information({dataPiper, setDataPiper}){
   </tbody>
 </table>
 </div>
-<h2>Add To Table</h2>
+<h2 id="add-to-table-font">Add To Table</h2>
     <form id= "form" onSubmit={handleSubmit}>
         <input id="client"
         type="text"
